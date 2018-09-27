@@ -3,14 +3,20 @@ import React, { Component } from 'react';
 import moments from 'moment';
 
 // Instruments
-import avatar from 'theme/assets/homer';
+import Styles from './styles.m.css';
 
 export default class Post extends Component {
     render() {
+        const {
+            currentUserFirstName,
+            currentUserLastName,
+            avatar
+        } = this.props;
+
         return (        
-            <section>
+            <section className = { Styles.post }>
                 <img src = { avatar } />
-                <a>Homer Simpson</a>
+                <a>{`${currentUserFirstName} ${currentUserLastName}`}</a>
                 <time>{ moments().format('MMMM D h:ms:ss a') }</time>
                 <p>Howdy!</p>
             </section>
