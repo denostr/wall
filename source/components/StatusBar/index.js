@@ -6,13 +6,19 @@ import avatar from 'theme/assets/homer';
 
 export default class StatusBar extends Component {
     render() {
+        const {
+            currentUserFirstName,
+            currentUserLastName,
+            avatar
+        } = this.props;
+
         return (
             <section className = { Styles.statusBar }>
                 <button>
                     <img src = { avatar } />
-                    <span>Homer</span>
+                    <span>{`${currentUserFirstName}`}</span>
                     &nbsp;
-                    <span>Simpson</span>
+                    <span>{`${currentUserLastName}`}</span>
                 </button>
             </section>
         )
