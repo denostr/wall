@@ -11,11 +11,6 @@ import Styles from './styles.m.css';
 
 export default class Feed extends Component {
     render() {
-        const {
-            currentUserFirstName,
-            avatar
-        } = this.props;
-
         return (
             <section className = { Styles.feed }>
                 <StatusBar />
