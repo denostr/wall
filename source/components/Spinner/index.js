@@ -12,7 +12,7 @@ export default class Spinner extends Component {
         const { isSpinning } = this.props;
 
         return createPortal(
-            isSpinning ? <div classname = { Styles.spinner } /> : null,
+            isSpinning ? <div className = { Styles.spinner } /> : null,
             portal
         )
     }
