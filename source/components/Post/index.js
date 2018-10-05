@@ -26,6 +26,7 @@ export default class Post extends Component {
             <Consumer>
                 {(context) => (
                     <section className = { Styles.post }>
+                        <span className = { Styles.cross } />
                         <img src = { context.avatar } />
                         <a>{ context.currentUserFirstName } { context.currentUserLastName }</a>
                         <time>{ moment.unix(created).format('MMMM D h:ms:ss a') }</time>
